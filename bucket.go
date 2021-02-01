@@ -8,5 +8,6 @@ type Bucket interface {
 	Cursor() Cursor
 	GetBucket(key []byte) Bucket
 	GetOrCreateBucket(key []byte) (Bucket, error)
+	DeleteBucket(key []byte) error
 	ForEach(func(key, value []byte) error) error
 }
