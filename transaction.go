@@ -4,4 +4,5 @@ package backend
 type Transaction interface {
 	GetBucket(key []byte) Bucket
 	GetOrCreateBucket(key []byte) (Bucket, error)
+	DeleteBucket(key []byte) error
 }
